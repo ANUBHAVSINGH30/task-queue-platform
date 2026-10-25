@@ -1,0 +1,17 @@
+
+services:
+  postgres:
+    image: postgres:18
+    container_name: task-queue-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: taskqueue
+      POSTGRES_PASSWORD: local_dev_password
+      POSTGRES_DB: taskqueue
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+volumes:
+  postgres_data:

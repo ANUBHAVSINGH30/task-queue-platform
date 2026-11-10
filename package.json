@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:api": "tsx watch src/api/server.ts",
+    "dev:worker": "tsx watch src/worker/worker.ts",
+    "test:claim": "tsx src/worker/test-claim.ts",
+    "test:two-workers": "tsx src/worker/test-two-workers.ts"
   },
   "keywords": [],
   "author": "",
